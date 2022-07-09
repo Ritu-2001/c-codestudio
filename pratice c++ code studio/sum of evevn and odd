@@ -1,0 +1,41 @@
+//Write a program to input an integer N and print the sum of all its even digits and sum of all its odd digits separately.
+Digits Mean Numbers, Not The Places! That Is, If The Given Integer Is "13245", Even Digits Are 2 & 4 And Odd Digits Are 1, 3 & 5.
+
+#include<iostream>
+using namespace std;
+
+int main() {
+	// Write your code here
+	int n;
+
+   cin>>n;
+
+   int oddsum = 0, evensum = 0;
+
+   
+
+   while(n > 0){
+
+       int digit = n % 10;
+
+       if(digit%2){    
+
+          //odd number
+
+           oddsum = oddsum + digit;
+
+       }else{
+
+          //even number
+
+           evensum = evensum + digit;
+
+       }
+
+       n = n / 10;
+
+   }
+
+   cout<<evensum<<" "<<oddsum;
+
+}
